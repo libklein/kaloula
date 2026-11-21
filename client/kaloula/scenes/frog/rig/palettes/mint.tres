@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="FrogPalette" format=3 uid="uid://4srvh4jpfp4p"]
+
+[ext_resource type="Script" path="res://scenes/frog/rig/frog_palette.gd" id="1_1yood"]
+
+[resource]
+script = ExtResource("1_1yood")

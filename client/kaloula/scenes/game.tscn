@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://q7oxsk8lfglb" path="res://scripts/map.gd" id="1_uwrxv"]
 [ext_resource type="TileSet" uid="uid://d4awnes6y6hjs" path="res://assets/tiles.tres" id="2_tiles"]
-[ext_resource type="Script" uid="uid://bn5irdyh830sa" path="res://scenes/frog/frog.gd" id="3_lbhrr"]
-[ext_resource type="SpriteFrames" uid="uid://qn47pacft6oc" path="res://assets/frog_sprites.tres" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://b24q8jt3bfgef" path="res://scenes/frog/local_input.gd" id="4_linput"]
+[ext_resource type="PackedScene" uid="uid://dpnfh6yyls0o0" path="res://scenes/frog/frog.tscn" id="3_frog"]
 
 [node name="Game" type="Node2D" unique_id=787533974]
 
@@ -15,28 +13,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAA
 tile_set = ExtResource("2_tiles")
 script = ExtResource("1_uwrxv")
 
-[node name="JumpHighlight" type="Polygon2D" parent="World" unique_id=1462093817]
-color = Color(1, 1, 1, 0.45)
-polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[node name="Frog" type="CharacterBody2D" parent="World" unique_id=1848280122 node_paths=PackedStringArray("map", "jump_highlight")]
+[node name="Frog" parent="World" unique_id=70407214 node_paths=PackedStringArray("map") instance=ExtResource("3_frog")]
 position = Vector2(-16, 16)
-script = ExtResource("3_lbhrr")
 map = NodePath("../TileMapLayer")
-jump_highlight = NodePath("../JumpHighlight")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World/Frog" unique_id=2027099068]
-sprite_frames = ExtResource("3_lnu2h")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Frog" unique_id=629978478]
-polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2080512935]
-position = Vector2(120, 64)
-zoom = Vector2(3, 3)
-
-[node name="Controllers" type="Node" parent="." unique_id=1309785512]
-
-[node name="LocalInput" type="Node" parent="Controllers" unique_id=574120983 node_paths=PackedStringArray("frog")]
-script = ExtResource("4_linput")
-frog = NodePath("../../World/Frog")

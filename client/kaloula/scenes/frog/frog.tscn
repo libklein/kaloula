@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpnfh6yyls0o0"]
+
+[ext_resource type="Script" uid="uid://bn5irdyh830sa" path="res://scenes/frog/frog.gd" id="1_frog"]
+[ext_resource type="Script" uid="uid://16rr2fowfwxe" path="res://scenes/frog/rig/frog_rig.gd" id="2_rig"]
+[ext_resource type="Resource" uid="uid://4srvh4jpfp4p" path="res://scenes/frog/rig/palettes/mint.tres" id="3_mint"]
+
+[node name="Frog" type="Node2D"]
+script = ExtResource("1_frog")
+
+[node name="Rig" type="Node2D" parent="."]
+scale = Vector2(0.21333334, 0.21333334)
+script = ExtResource("2_rig")
+animation = 3
+palette = ExtResource("3_mint")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FrogPalette" format=3 uid="uid://bwh8vqiflmper"]
+
+[ext_resource type="Script" path="res://scenes/frog/rig/frog_palette.gd" id="1_mw1mp"]
+
+[resource]
+script = ExtResource("1_mw1mp")
+skin = Color(0.9098039, 0.40392157, 0.24705882, 1)
+skin_lines = Color(0.76862746, 0.2901961, 0.17254902, 1)
+front_upper = Color(0.81960785, 0.33333334, 0.22745098, 1)
+front_lower = Color(0.63529414, 0.24313726, 0.16862746, 1)
+hind_shin = Color(0.7137255, 0.28627452, 0.1882353, 1)
+feet = Color(0.41960785, 0.14901961, 0.09803922, 1)
+eyes = Color(0.16862746, 0.08627451, 0.0627451, 1)
+eyelids = Color(0.80062747, 0.355451, 0.21741176, 1)
+throat = Color(0.92333335, 0.49333334, 0.36, 1)
+back_skin = Color(0.8188235, 0.3635294, 0.22235294, 1)
+belly = Color(0.96862745, 0.8901961, 0.7490196, 1)
+belly_lines = Color(0.8901961, 0.7647059, 0.5764706, 1)
+belly_spots = Color(0.9372549, 0.827451, 0.6509804, 1)
+belly_eyes = Color(0.16862746, 0.08627451, 0.0627451, 1)
+limb_upper = Color(0.91431373, 0.4337255, 0.28470588, 1)
+limb_middle = Color(0.7783333, 0.34431374, 0.24745098, 1)
+limb_lower = Color(0.6566275, 0.26337257, 0.17317648, 1)
+toe_tips = Color(0.69960785, 0.27803922, 0.18862745, 1)
+shadow = Color(0.3529412, 0.16470589, 0.10980392, 1)
